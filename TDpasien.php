@@ -1,9 +1,15 @@
-<?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+<?php 
+include('template/header.php'); 
+  if (!in_array("pasien", $_SESSION['admin_akses'])) {
+    echo "
+    <div class='container section-title' data-aos='fade-up'>
+    <h2>Kamu Tidak Punya Akses</h2>
+    </div>
+    ";
+    include('template/footer.php');
+    exit();
+  }
 ?>
-
-<?php include('template/header.php') ?>
 
 <section id="data-pasien" class="data-pasien section">
   <div class="container section-title" data-aos="fade-up">

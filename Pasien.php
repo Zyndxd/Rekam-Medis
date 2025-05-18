@@ -1,4 +1,15 @@
-<?php include('template/header.php') ?>
+<?php 
+include('template/header.php'); 
+  if (!in_array("pasien", $_SESSION['admin_akses'])) {
+    echo "
+    <div class='container section-title' data-aos='fade-up'>
+    <h2>Kamu Tidak Punya Akses</h2>
+    </div>
+    ";
+    include('template/footer.php');
+    exit();
+  }
+?>
   <!-- Features Section -->
   <section id="features" class="features section">
 

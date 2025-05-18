@@ -21,7 +21,7 @@
             <form action="Reg.php" method="POST">
                 <h2>REGISTER</h2>
                 <input type="text" name="nama" placeholder="Nama" require>
-                <input type="email" name="email" placeholder="Email" require>
+                <input type="text" name="username" placeholder="Username" require>
                 <input type="password" name="password" placeholder="Password" require>
                 <button type="submit" name="register">REGISTER</button>
                 <p>Already have an account? <a href="login.php">Login</a></p>

@@ -1,3 +1,11 @@
+<?php 
+session_start();
+
+if(isset($_SESSION["Login"])){
+    header("Location: index.php");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,17 +22,17 @@
     />
 
     <!-- Style -->
-    <link rel="stylesheet" href="../assets/assets/css/login.css" />
+    <link rel="stylesheet" href="assets/assets/css/login.css" />
 </head>
 <body>
     <div class="container">
         <div class="form-box active" id="login-form">
             <form action="Log.php" method="POST">
                 <h2>LOGIN</h2>
-                <input type="email" name="email" placeholder="Email" require>
+                <input type="text" name="username" placeholder="username" require>
                 <input type="password" name="password" placeholder="Password" require>
                 <button type="submit" name="login">LOGIN</button>
-                <p>don't have an account? <a href="register.php"">Register</a></p>
+                <p>don't have an account? <a href="Masuk/register.php"">Register</a></p>
             </form>
         </div>
     </div>

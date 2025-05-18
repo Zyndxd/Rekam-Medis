@@ -1,3 +1,12 @@
+<?php 
+session_start();
+
+if(!isset($_SESSION["Login"])){
+  header("Location: Login.php");
+  exit;
+}
+?>
+
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -54,7 +63,8 @@
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="Masuk/Login.php">Login</a>
+      <a class="btn-getstarted" href="Login.php">Login</a>
+      <a class="btn-getstarted" href="logout.php">Logout</a>
 
     </div>
   </header>
